@@ -1,0 +1,45 @@
+const mysql = require('mysql');
+
+// Create a MySQL connection
+const connection = mysql.createConnection({
+  host: 'localhost',
+  user: 'yourusername',
+  password: 'yourpassword',
+  database: 'yourdatabase'
+});
+
+// Connect to the MySQL server
+connection.connect(err => {
+  if (err) {
+    console.error('Error connecting to MySQL server:', err);
+    return;
+  }
+  console.log('Connected to MySQL server');
+});
+
+// Execute the SQL query
+const query = `
+  SELECT sp.first_name, sp.last_name, sp.email, SUM(d.total) AS total
+  FROM seller_profiles sp
+  JOIN deals d ON sp.seller_id = d.seller_id
+  WHERE MONTH(d.deal_date) = 6 AND YEAR(d.deal_date) = 2022
+  GROUP BY sp.first_name, sp.last_name, sp.email
+  ORDER BY total DESC
+  LIMIT 3;
+`;
+
+connection.query(query, (error, results, fields) => {
+  if (error) {
+    console.error('Error executing query:', error);
+    return;
+  }
+
+  // Process the results
+  console.log('Top 3 seller profiles with highest total deals in June 2022:');
+  results.forEach((row, index) => {
+    console.log(`${index + 1}. ${row.first_name} ${row.last_name} (${row.email}): $${row.total}`);
+  });
+
+  // Close the connection
+  connection.end();
+});

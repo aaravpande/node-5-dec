@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Truth or Dare</title>
+<style>
+    body {
+        font-family: Arial, sans-serif;
+    }
+</style>
+</head>
+<body>
+
+<h1>Truth or Dare</h1>
+
+<button onclick="showTruth()">Truth</button>
+<button onclick="showDare()">Dare</button>
+
+<p id="output"></p>
+
+<script>
+function showTruth() {
+    const truths = [
+        "Have you ever lied to your best friend?",
+        "What is your biggest fear?",
+        "What's the most embarrassing thing that has happened to you?",
+        // Add more truths here
+    ];
+    const truth = truths[Math.floor(Math.random() * truths.length)];
+    document.getElementById("output").textContent = truth;
+}
+
+function showDare() {
+    const dares = [
+        "Do your best impression of a chicken.",
+        "Sing a song in a funny voice.",
+        "Text your crush and confess your love to them.",
+        // Add more dares here
+    ];
+    const dare = dares[Math.floor(Math.random() * dares.length)];
+    document.getElementById("output").textContent = dare;
+}
+</script>
+
+</body>
+</html>

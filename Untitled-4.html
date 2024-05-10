@@ -1,0 +1,36 @@
+// Function to reverse a string
+function reverseString(str) {
+    return str.split('').reverse().join('');
+}
+
+// Example usage
+var reversedString = reverseString("Hello, world!");
+console.log("Reversed string:", reversedString);
+// Function to find the maximum number in an array
+function findMax(arr) {
+    if (arr.length === 0) {
+        return "Array is empty";
+    }
+    var max = arr[0];
+    for (var i = 1; i < arr.length; i++) {
+        if (arr[i] > max) {
+            max = arr[i];
+        }
+    }
+    return max;
+}
+
+// Example usage
+var numbers = [3, 7, 2, 8, 5];
+console.log("Maximum number:", findMax(numbers));
+// Function to calculate the factorial of a number
+function factorial(n) {
+    if (n === 0 || n === 1) {
+        return 1;
+    }
+    return n * factorial(n - 1);
+}
+
+// Example usage
+var num = 5;
+console.log("Factorial of", num, "is:", factorial(num));

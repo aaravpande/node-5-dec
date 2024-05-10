@@ -1,0 +1,24 @@
+<script>
+// Simple To-Do List
+var todoList = [];
+
+// Function to add an item to the to-do list
+function addTodoItem(item) {
+    todoList.push(item);
+    console.log("Added item:", item);
+}
+
+// Function to display all items in the to-do list
+function displayTodoList() {
+    console.log("To-Do List:");
+    todoList.forEach(function(item, index) {
+        console.log(index + 1 + ".", item);
+    });
+}
+
+// Example usage
+addTodoItem("Buy groceries");
+addTodoItem("Finish homework");
+addTodoItem("Call mom");
+displayTodoList();
+</script>

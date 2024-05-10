@@ -1,0 +1,39 @@
+// Function to calculate the area of a circle
+function calculateCircleArea(radius) {
+    return Math.PI * radius * radius;
+}
+
+// Example usage
+var radius = 5;
+var area = calculateCircleArea(radius);
+console.log("The area of the circle with radius", radius, "is:", area);
+// Function to get current date and time
+function getCurrentDateTime() {
+    return new Date();
+}
+
+// Example usage
+var currentDate = getCurrentDateTime();
+console.log("Current Date and Time:", currentDate);
+// Simple To-Do List
+var todoList = [];
+
+// Function to add an item to the to-do list
+function addTodoItem(item) {
+    todoList.push(item);
+    console.log("Added item:", item);
+}
+
+// Function to display all items in the to-do list
+function displayTodoList() {
+    console.log("To-Do List:");
+    todoList.forEach(function(item, index) {
+        console.log(index + 1 + ".", item);
+    });
+}
+
+// Example usage
+addTodoItem("Buy groceries");
+addTodoItem("Finish homework");
+addTodoItem("Call mom");
+displayTodoList();

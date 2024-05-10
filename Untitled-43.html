@@ -1,0 +1,32 @@
+erver running at http://127.0.0.1:3000/
+
+Open your terminal or command prompt.
+Navigate to the directory where the file is saved.
+Run the command node server.js.
+You should see the message Server running at http://127.0.0.1:3000/ printed in the terminal, indicating that the server is running.
+You can then open a web browser and navigate to http://127.0.0.1:3000/ to see the "Hello, World!" message displayed in the browser.
+This is a very basic example, and in a real-world application, you would typically handle more complex logic, routing, error handling, etc. But it should give you a starting point for understanding how to create a simple Node.js server.
+
+
+// Import the required modules
+const http = require('http');
+
+// Define the hostname and port
+const hostname = '127.0.0.1';
+const port = 3000;
+
+// Create a server
+const server = http.createServer((req, res) => {
+  // Set the response header
+  res.statusCode = 200;
+  res.setHeader('Content-Type', 'text/plain');
+
+  // Send the response
+  res.end('Hello, World!\n');
+});
+
+// Start the server
+server.listen(port, hostname, () => {
+  console.log(`Server running at http://${hostname}:${port}/`);
+});
+

@@ -1,0 +1,52 @@
+// Function to perform addition
+function add(a, b) {
+    return a + b;
+}
+
+// Function to perform subtraction
+function subtract(a, b) {
+    return a - b;
+}
+
+// Function to perform multiplication
+function multiply(a, b) {
+    return a * b;
+}
+
+// Function to perform division
+function divide(a, b) {
+    if (b === 0) {
+        return "Error: Division by zero";
+    }
+    return a / b;
+}
+
+// Example usage
+console.log("Addition:", add(5, 3));
+console.log("Subtraction:", subtract(10, 4));
+console.log("Multiplication:", multiply(7, 2));
+console.log("Division:", divide(15, 3));
+// Function to generate a random integer between min and max (inclusive)
+function getRandomInt(min, max) {
+    return Math.floor(Math.random() * (max - min + 1)) + min;
+}
+
+// Example usage
+var randomNumber = getRandomInt(1, 10);
+console.log("Random Number between 1 and 10:", randomNumber);
+// Function to check if a number is prime
+function isPrime(number) {
+    if (number <= 1) {
+        return false;
+    }
+    for (var i = 2; i <= Math.sqrt(number); i++) {
+        if (number % i === 0) {
+            return false;
+        }
+    }
+    return true;
+}
+
+// Example usage
+console.log("Is 17 prime?", isPrime(17));
+console.log("Is 24 prime?", isPrime(24));

@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Text Adventure Game</title>
+</head>
+<body>
+    <h1>Welcome to the Text Adventure Game</h1>
+    <p>You find yourself in a dark room. What do you do?</p>
+    <button onclick="explore()">Explore</button>
+    <button onclick="stay()">Stay Put</button>
+    <p id="result"></p>
+
+    <script>
+        function explore() {
+            var resultElement = document.getElementById('result');
+            resultElement.textContent = "You venture forth and encounter a fierce dragon! You have been defeated.";
+        }
+
+        function stay() {
+            var resultElement = document.getElementById('result');
+            resultElement.textContent = "You decide to stay put. Eventually, someone finds you and rescues you!";
+        }
+    </script>
+</body>
+</html>

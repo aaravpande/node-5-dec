@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Change Text Color</title>
+  <style>
+    /* CSS to style the text */
+    #text {
+      font-size: 24px;
+      font-family: Arial, sans-serif;
+      color: black; /* Initial color */
+    }
+  </style>
+</head>
+<body>
+  <p id="text">Hello, World!</p>
+  <button onclick="changeColor()">Change Color</button>
+
+  <script>
+    // JavaScript function to change text color
+    function changeColor() {
+      var textElement = document.getElementById("text");
+      var currentColor = textElement.style.color;
+      
+      // If the current color is black, change it to red, otherwise change it back to black
+      if (currentColor === "black") {
+        textElement.style.color = "red";
+      } else {
+        textElement.style.color = "black";
+      }
+    }
+  </script>
+</body>
+</html>
