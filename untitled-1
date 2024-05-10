@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>IGI Level 10</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #111;
+            color: #fff;
+        }
+        .level-container {
+            width: 80%;
+            margin: 20px auto;
+            padding: 20px;
+            border: 2px solid #fff;
+            border-radius: 10px;
+            text-align: center;
+        }
+        .level-title {
+            font-size: 24px;
+            font-weight: bold;
+            margin-bottom: 20px;
+        }
+        .level-description {
+            font-size: 18px;
+            margin-bottom: 20px;
+        }
+        .objective {
+            font-size: 20px;
+            font-style: italic;
+        }
+        .hints {
+            font-size: 16px;
+            margin-top: 20px;
+        }
+    </style>
+</head>
+<body>
+
+<div class="level-container">
+    <h1 class="level-title">IGI Level 10: Secret Base Infiltration</h1>
+    <p class="level-description">You are tasked with infiltrating the enemy's secret base to gather crucial intel.</p>
+    <p class="objective">Objective: Find the mainframe and download the data.</p>
+    <p class="hints">Hints: Stay low, use cover, and watch out for enemy patrols.</p>
+</div>
+
+</body>
+</html>
+
